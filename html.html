@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <h2>Focus Timer</h2>
+            <div id="timer">25:00</div>
+            <button id="startTimer">Start Sprint</button>
+            <div class="stats">
+                <p>Sessions Today: <span id="sessionCount">0</span></p>
+            </div>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1>Daily Sprint Planner</h1>
+                <input type="text" id="taskInput" placeholder="Next milestone (e.g., Implement FIRST/FOLLOW)...">
+                <select id="priority">
+                    <option value="p1">P1: Critical (Compiler/Backend)</option>
+                    <option value="p2">P2: Projects (Music Player/Timetable)</option>
+                    <option value="p3">P3: Review (Networks/OS)</option>
+                </select>
+                <button onclick="addTask()">Add to Sprint</button>
+            </header>
+
+            <ul id="taskList"></ul>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
