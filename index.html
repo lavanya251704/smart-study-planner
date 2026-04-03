@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard">
+        <aside class="engine-room">
+            <h2>Micro-Sprint</h2>
+            <div id="timer-display">10:00</div>
+            <button id="timerBtn" class="primary-btn">Start 10m Sprint</button>
+            <button id="resetBtn" class="secondary-btn">Reset</button>
+            
+            <div class="stats-box">
+                <p>Sprints Completed: <span id="sprintCount">0</span></p>
+            </div>
+        </aside>
+
+        <main class="mission-control">
+            <div class="header">
+                <h1>Mission Control</h1>
+                <div class="progress-section">
+                    <div class="progress-labels">
+                        <span>Daily Goal</span>
+                        <span id="percent-text">0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <input type="text" id="taskInput" placeholder="Break it down (e.g. 'Fix Auth Middleware')">
+                <select id="priority">
+                    <option value="p1">P1: Core Code</option>
+                    <option value="p2">P2: Project UI</option>
+                    <option value="p3">P3: Quick Review</option>
+                </select>
+                <button id="addTaskBtn">+</button>
+            </div>
+
+            <ul id="taskList"></ul>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+    
